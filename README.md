@@ -34,9 +34,6 @@ In contrast to a scalar processor, which can execute at most one single instruct
 - Out-of-Order Execution
 - In-order Dispatch and Completion
 
-### Dependencies
-- g++
-
 ### Usage
 ```
 g++ super-scalar.cpp -o super-scalar
