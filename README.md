@@ -34,13 +34,6 @@ In contrast to a scalar processor, which can execute at most one single instruct
 - Out-of-Order Execution
 - In-order Dispatch and Completion
 
-### Assumptions
-- No fetching until Branch is resolved
-- Execution of any operation in any Funcitonal Unit takes 1 cycle
-- Any number of instructions can be dispatched from the dispatch buffer in a cycle
-
-    **NOTE**: Instruction can be dispatched only if functional units are not busy
-
 ### Dependencies
 - g++
 
