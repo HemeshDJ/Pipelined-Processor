@@ -23,6 +23,7 @@ g++ pipeline_forwarding.cpp -o pipeline_forwarding
 ```
 
 ## Super Scalar Pipelined Processor
+In contrast to a scalar processor, which can execute at most one single instruction per clock cycle, a superscalar processor can execute more than one instruction during a clock cycle by simultaneously dispatching multiple instructions to different execution units on the processor
 
 ### Properties    
 - 6-stage pipeline (fetch-decode-dispatch-execute-finish-complete)
