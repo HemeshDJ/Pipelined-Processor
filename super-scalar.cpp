@@ -318,7 +318,6 @@ class Arithmetic : public FunctionalUnit
                 RESe& R = resStation[i];
                 if(!R.busy) continue;
                 Instruction& I = R.I;
-                cout << I.RA << " " << I.RB << endl;
                 if(R.busy && I.validA && I.validB)
                 {
                     R.ready = 1;
@@ -341,7 +340,6 @@ class Arithmetic : public FunctionalUnit
                 case 1: I.ALUOutput = I.RA - I.RB; break;
                 case 2: I.ALUOutput = I.RA * I.RB; break;
             }
-            cout << I.ALUOutput << endl;
             R.executed = 1;
         }
 }A;
@@ -377,7 +375,6 @@ class Logical : public FunctionalUnit
                 case 6: I.ALUOutput = ~ I.RA; break;
                 case 7: I.ALUOutput = I.RA ^ I.RB; break;
             }
-            cout << I.ALUOutput << endl;
             R.executed = 1;
         }
 }L;
@@ -418,7 +415,6 @@ class Memory : public FunctionalUnit
                 }
                 case 9: I.ALUOutput = I.RA + I.Imm; break;                    
             }
-            cout << I.ALUOutput << endl;
             R.executed = 1;
         }
         
@@ -455,7 +451,6 @@ class Branch : public FunctionalUnit
                             else I.Cond = 0;
                 case 10: I.ALUOutput = I.NPC + (I.Imm << 1);
             }
-            cout << I.ALUOutput << endl;
             R.executed = 1;
         }
 }B;
@@ -715,7 +710,6 @@ void Dispatch()
                 break;
             }
         }
-        cout << dispatched << endl;
         if(dispatched) {
             ROBe RRR;
             RRR.I = I;
