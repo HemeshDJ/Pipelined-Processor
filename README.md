@@ -2,30 +2,14 @@
 This code simulates a Pipelined processor. Given data cache, instruction cache and register file, it can simulate the execution of instructions and give the final data cache, register file and stats.
 
 There are 3 Versions of the processor:
-1. Pipelined Processor
-2. Pipelined Processor with Operand Forwarding
+1. Scalar Pipelined Processor
+    - This is the simplest version of the processor. It has only one pipeline. It has no operand forwarding.
+2. Scalar Pipelined Processor with Operand Forwarding
+    - This is the simplest version of the processor. It has only one pipeline. It has operand forwarding.
 3. Super Scalar Pipelined Processor
+    - A superscalar processor can execute more than one instruction during a clock cycle by simultaneously dispatching multiple instructions to different execution units on the processor
 
-## Pipelined Processor
-
-### Usage
-```
-g++ pipeline.cpp -o pipeline
-./pipeline
-```
-
-## Pipelined Processor with Operand Forwarding
-
-### Usage
-```
-g++ pipeline_forwarding.cpp -o pipeline_forwarding
-./pipeline_forwarding
-```
-
-## Super Scalar Pipelined Processor
-In contrast to a scalar processor, which can execute at most one single instruction per clock cycle, a superscalar processor can execute more than one instruction during a clock cycle by simultaneously dispatching multiple instructions to different execution units on the processor
-
-### Properties    
+### Additional Properties of the Super Scalar Processor
 - 6-stage pipeline (fetch-decode-dispatch-execute-finish-complete)
 - Fetches Multiple Instructions at Once
 - Register Renaming
@@ -34,7 +18,21 @@ In contrast to a scalar processor, which can execute at most one single instruct
 - Out-of-Order Execution
 - In-order Dispatch and Completion
 
-### Usage
+## Usage
+
+### Scalar Pipelined Processor
+```
+g++ pipeline.cpp -o pipeline
+./pipeline
+```
+
+### Scalar Pipelined Processor with Operand Forwarding
+```
+g++ pipeline_forwarding.cpp -o pipeline_forwarding
+./pipeline_forwarding
+```
+
+### Super Scalar Pipelined Processor
 ```
 g++ super-scalar.cpp -o super-scalar
 ./super-scalar
