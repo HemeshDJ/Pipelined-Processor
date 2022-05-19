@@ -46,5 +46,5 @@ g++ super-scalar.cpp -o super-scalar
 ## Output
 Files Output.txt, ODache.txt and ORF.txt will be generated in the output directory i.e. output/
 - Output.txt will contain the stats of the execution.
-- ODache.txt will contain the final Dache.
-- ORF.txt will contain the final RF.
+- ODache.txt will contain the final data cache.
+- ORF.txt will contain the final register file.
