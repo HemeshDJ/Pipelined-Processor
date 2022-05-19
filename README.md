@@ -1,5 +1,5 @@
 # Super Scalar Pipelined Processor
-This code simulates a [Super Scalar Pipelined processor](https://en.wikipedia.org/wiki/Superscalar_processor). A superscalar processor is a CPU that implements a form of parallelism called instruction-level parallelism within a single processor. In contrast to a scalar processor, which can execute at most one single instruction per clock cycle, a superscalar processor can execute more than one instruction during a clock cycle by simultaneously dispatching multiple instructions to different execution units on the processor.
+This code simulates a [Super Scalar Pipelined processor](https://en.wikipedia.org/wiki/Superscalar_processor). Given data cache, instruction cache and register file, it can simulate the execution of instructions and give the final data cache, register file and stats.
 
 ## Properties    
 - 6-stage pipeline (fetch-decode-dispatch-execute-finish-complete)
