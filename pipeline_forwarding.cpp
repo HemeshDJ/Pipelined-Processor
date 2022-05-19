@@ -372,6 +372,7 @@ int main()
     } while (!IBuf.empty());  // End of Main Loop
 
     print_output(DCache, 256, "./output/ODCachef.txt");  // Print DCache
+    print_output(RF, 16, "./output/ORF.txt");            // Print RF
     print_stats("./output/Outputf.txt");                 // Print Stats
 
     return 0;
