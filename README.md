@@ -1,5 +1,5 @@
 # Super Scalar Pipelined Processor
-This code simulates a Super Scalar Pipelined processor. A superscalar processor is a CPU that implements a form of parallelism called instruction-level parallelism within a single processor. In contrast to a scalar processor, which can execute at most one single instruction per clock cycle, a superscalar processor can execute more than one instruction during a clock cycle by simultaneously dispatching multiple instructions to different execution units on the processor.
+This code simulates a [Super Scalar Pipelined processor](https://en.wikipedia.org/wiki/Superscalar_processor). A superscalar processor is a CPU that implements a form of parallelism called instruction-level parallelism within a single processor. In contrast to a scalar processor, which can execute at most one single instruction per clock cycle, a superscalar processor can execute more than one instruction during a clock cycle by simultaneously dispatching multiple instructions to different execution units on the processor.
 
 ## Properties    
 - 6-stage pipeline (fetch-decode-dispatch-execute-finish-complete)
@@ -14,7 +14,8 @@ This code simulates a Super Scalar Pipelined processor. A superscalar processor 
 - No fetching until Branch is resolved
 - Execution of any operation in any Funcitonal Unit takes 1 cycle
 - Any number of instructions can be dispatched from the dispatch buffer in a cycle
-    - **NOTE**: Instruction can be dispatched only if functional units are not busy
+
+    **NOTE**: Instruction can be dispatched only if functional units are not busy
 
 ## Dependencies
 - g++
