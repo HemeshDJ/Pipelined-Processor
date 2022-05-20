@@ -775,30 +775,19 @@ int32_t main()
     do
     {
         num_cycles++;
-        // Completion
-        Complete();
-
-        // Finishing
-        Finish();
-
-        // Issuing && Execution
-        Execute();
-        
-        // Dispatch
-        Dispatch();
-
-        // Decode
-        Decode();
-
-        // Fetch
-        Fetch();
+        Complete();     // Complete
+        Finish();       // Finish
+        Execute();      // Issue and Execute
+        Dispatch();     // Dispatch
+        Decode();       // Decode
+        Fetch();        // Fetch
 
     }while((!IBuf.empty() || !DBuf.empty() || !ROB.empty() || !halt));
 
     for(int i = 0; i < 16; i++) RF[i] = ARF[i].data;
 
     print_output(DCache, 256, "./output/ODCache.txt");  // Print DCache
-    print_output(RF, 16, "./output/ORF.txt");  // Print RF
+    print_output(RF, 16, "./output/ORF.txt");           // Print RF
     print_stats("./output/Output.txt");                 // Print Stats
     
     return 0;
