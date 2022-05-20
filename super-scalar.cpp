@@ -596,12 +596,14 @@ void Complete()
                 {
                     PC = I.ALUOutput;
                     can_fetch = 1;
+                    break;
                 }
                 case 11:
                 {
                     if(I.Cond) PC = I.ALUOutput;
                     else PC = I.NPC;
                     can_fetch = 1;
+                    break;
                 }
                 case 15:
                 {
